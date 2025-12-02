@@ -1,0 +1,26 @@
+    const fileInput = document.getElementById("pdfInput");
+    const output = document.getElementById("output");
+
+    if (!fileInput.files.length) {
+        output.textContent = "Please upload a PDF.";
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    output.textContent = "Processing...";
+
+    try {
+        const response = await fetch("http://127.0.0.1:8000/extract", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        output.textContent = data.text || "No text returned.";
+    } catch (error) {
+        output.textContent = "Error: " + error.message;
+    }
+}
+

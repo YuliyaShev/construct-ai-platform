@@ -1,0 +1,30 @@
+{
+  "category": "Guardrails",
+  "source": "International Building Code (IBC) - summarized rules",
+  "rules": [
+    {
+      "id": "IBC-G-001",
+      "description": "Minimum guardrail height for areas accessible to building occupants.",
+      "requirement": "42 inches (1067 mm)",
+      "exceptions": [
+        "R-3 occupancy (residential houses) may use 36 inches (914 mm)"
+      ]
+    },
+    {
+      "id": "IBC-G-002",
+      "description": "Openings in guardrails shall not allow passage of a 4-inch (102 mm) sphere.",
+      "requirement": "Maximum opening size: 4 inches"
+    },
+    {
+      "id": "IBC-G-003",
+      "description": "Load resistance requirements for guardrails.",
+      "requirement": "50 lb/ft (0.73 kN/m) top rail, 200 lb concentrated load at any point."
+    },
+    {
+      "id": "IBC-G-004",
+      "description": "Guards required when walking surfaces are more than 30 inches above grade.",
+      "requirement": "Guardrail mandatory above 30 inches"
+    }
+  ]
+}
+

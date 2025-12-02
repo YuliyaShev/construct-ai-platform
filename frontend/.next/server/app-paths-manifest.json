@@ -1,0 +1,10 @@
+{
+  "/analyze/page": "app/analyze/page.js",
+  "/page": "app/page.js",
+  "/upload/page": "app/upload/page.js",
+  "/bom/page": "app/bom/page.js",
+  "/image/page": "app/image/page.js",
+  "/rfi/page": "app/rfi/page.js",
+  "/shop-drawing/page": "app/shop-drawing/page.js",
+  "/api/files/route": "app/api/files/route.js"
+}
