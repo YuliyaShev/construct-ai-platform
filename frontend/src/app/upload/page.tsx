@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Table, THead, TBody, TR, TH, TD } from "@/components/ui/table";
-import dynamic from "next/dynamic";
 import FileDropzone from "@/components/pdf/FileDropzone";
+import PdfPreview from "@/components/pdf/PdfPreviewNoSSR";
 
 type FileRecord = {
   id: number;
@@ -22,11 +22,6 @@ const formatSize = (size: number) => {
   const value = size / Math.pow(1024, idx);
   return `${value.toFixed(value >= 10 || idx === 0 ? 0 : 1)} ${units[idx]}`;
 };
-
-const PdfPreview = dynamic(() => import("@/components/pdf/PdfPreview"), {
-  ssr: false,
-  loading: () => <p className="text-sm text-slate-500">Loading PDF preview...</p>
-});
 
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);

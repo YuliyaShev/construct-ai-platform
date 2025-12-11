@@ -8,14 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/analyze/Primitives";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import dynamic from "next/dynamic";
 import type { HeatmapIssue } from "@/components/PdfHeatmapViewer";
+import PdfHeatmapViewer from "@/components/pdf/PdfViewerNoSSR";
 import Link from "next/link";
-
-const PdfHeatmapViewer = dynamic(() => import("@/components/PdfHeatmapViewer").then((m) => m.PdfHeatmapViewer), {
-  ssr: false,
-  loading: () => <p className="text-sm text-slate-500">Loading heatmap viewer...</p>
-});
 
 export default function AnalyzeDetailPage() {
   const params = useParams();
