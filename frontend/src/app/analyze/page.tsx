@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FileListCard } from "@/components/analyze/FileListCard";
 import { AnalyzePanel } from "@/components/analyze/AnalyzePanel";
-import { PdfPreviewModal } from "@/components/analyze/PdfPreviewModal";
+import dynamic from "next/dynamic";
 import { type FileRecord } from "@/components/analyze/types";
 
 export default function AnalyzePage() {
@@ -118,3 +118,6 @@ export default function AnalyzePage() {
     </div>
   );
 }
+const PdfPreviewModal = dynamic(() => import("@/components/analyze/PdfPreviewModal").then((m) => m.PdfPreviewModal), {
+  ssr: false
+});
