@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ReactQueryClientProvider } from "./providers";
 import "./globals.css";
 import "../styles/shadcn.css";
+import "../styles/pdf.css";
 import AppShell from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {

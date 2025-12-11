@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { PdfHeatmapViewer } from "@/components/PdfHeatmapViewer";
 import type { HeatmapIssue } from "@/components/PdfHeatmapViewer";
+import Link from "next/link";
 
 export default function AnalyzeDetailPage() {
   const params = useParams();
@@ -72,10 +73,15 @@ export default function AnalyzeDetailPage() {
             <p className="text-sm text-slate-600 dark:text-slate-400">Review the PDF and AI-generated insights.</p>
           </div>
           {file && (
-            <Button onClick={() => window.open(`/api/download/${id}`, "_blank")} variant="secondary" className="gap-2">
-              <Download className="h-4 w-4" />
-              Download
-            </Button>
+            <div className="flex gap-2">
+              <Button onClick={() => window.open(`/api/download/${id}`, "_blank")} variant="secondary" className="gap-2">
+                <Download className="h-4 w-4" />
+                Download
+              </Button>
+              <Link href={`/bom?file=${id}`} className="inline-flex">
+                <Button variant="outline">Extract BOM</Button>
+              </Link>
+            </div>
           )}
         </div>
 
