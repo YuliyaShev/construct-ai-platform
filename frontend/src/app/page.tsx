@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col">
@@ -20,8 +25,7 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="text-5xl md:text-6xl font-extrabold mt-20 leading-tight"
         >
-          AI-Powered Construction{" "}
-          <span className="text-blue-400">Modernization</span>
+          AI-Powered Construction <span className="text-blue-400">Modernization</span>
         </motion.h1>
 
         <motion.p
@@ -30,8 +34,7 @@ export default function Home() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mt-6 text-xl max-w-2xl text-gray-300"
         >
-          Automate shop drawing analysis, detect issues instantly, streamline
-          coordination, and supercharge your construction workflows with AI.
+          Automate shop drawing analysis, detect issues instantly, streamline coordination, and supercharge your construction workflows with AI.
         </motion.p>
 
         <motion.div
